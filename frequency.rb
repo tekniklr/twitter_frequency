@@ -33,6 +33,9 @@ def get_follows(twitter, user)
   friends = twitter.friends(user)
   begin
     friends_array = friends.to_a
+  rescue Twitter::Error::Unauthorized
+    print "🚫 you do not have access to this person's follows"
+    return []
   rescue Twitter::Error::TooManyRequests => error
     puts "\t⏲ rate limit hit! pausing #{error.rate_limit.reset_in.to_s} seconds..."
     sleep error.rate_limit.reset_in + 1
@@ -74,6 +77,9 @@ def tweets_over_time(twitter, username, time)
         break
       end
     end
+  rescue Twitter::Error::Unauthorized
+    print "🚫 "
+    return 0
   rescue Twitter::Error::TooManyRequests => error
     print "⏲ "
     sleep error.rate_limit.reset_in + 1

@@ -1,0 +1,9 @@
+Check the loquaciousness of the people you follow on twitter during a specified number of minutes over the last 48 hours and/or 200 tweets.
+
+== Usage
+
+First you will need to create a new app (read only permissions) on https://apps.twitter.com for API access. Copy the `credentials.rb.example` file to `credentials.rb` and enter your access tokens from twitter into the new file.
+
+Then, simply `bundle install`, `ruby frequency.rb`, and answer the prompts!
+
+By default it will check your user's follows. If you check someone else's follows, you won't be able to get tweet data for any account that you don't have permission to see (private/blocked).

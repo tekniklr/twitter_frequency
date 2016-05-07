@@ -1,4 +1,4 @@
-Check the loquaciousness of the people you follow on twitter during a specified number of minutes over the last 48 hours and/or 200 tweets.
+Check the garrulousness of the people you follow on twitter during a specified number of minutes over the last 48 hours and/or 200 tweets.
 
 == Usage
 

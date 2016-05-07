@@ -119,7 +119,7 @@ follows.each do |username|
   follows_with_tweet_counts[username] = tweets_over_time(twitter, username, time)
 end
 
-puts "\n\n👍 Done! #{user}'s most loquacious follows over #{time_ago} are:"
+puts "\n\n👍 Done! #{user}'s most garrulous follows over #{time_ago} are:"
 shown = 0
 follows_with_tweet_counts.sort_by{ |k, v| v }.reverse.each do |k,v|
   if v > 0
